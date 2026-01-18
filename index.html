@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sorting Visualizer - DATN 2026</title>
+
+    <meta name="description" content="Interactive sorting algorithm visualizer with multi-language support." />
+    <meta name="author" content="PDN237" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="top-bar">
+        <div class="logo">
+            <span class="logo-icon"></span>
+            <span class="logo-text" data-i18n="logo">DATN-2026</span>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active" data-i18n="nav.home">Trang chủ</a>
+            <a href="course.html" class="nav-link" data-i18n="nav.video">Học qua Khóa học</a>
+            <a href="practice.html" class="nav-link" data-i18n="nav.upload">luyện tập</a>
+            <a href="ai-test.html" class="nav-link" data-i18n="nav.ai">AI chấm bài</a>
+            <a href="login.html" class="nav-link" data-i18n="nav.login">Đăng nhập</a>
+        </nav>
+    </div>
+</header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="controls">
+
+            <div class="panel">
+                <label data-i18n="label.elements">ELEMENTS</label>
+                <input type="number" id="numElements" min="5" max="100" value="30" />
+            </div>
+
+            <div class="panel">
+                <label data-i18n="label.algorithm">ALGORITHM</label>
+                <select id="sortType">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="merge">Merge Sort</option>
+                </select>
+            </div>
+
+            <div class="panel">
+                <label data-i18n="label.speed">SPEED</label>
+                <select id="speed">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="2">2x</option>
+                    <option value="4">4x</option>
+                </select>
+            </div>
+
+            <div class="panel">
+                <label data-i18n="label.visual">VISUALIZATION</label>
+                <select id="visualizationMode">
+                    <option value="boxes">Boxes</option>
+                    <option value="bars">Bars</option>
+                    <option value="sized-boxes">Sized Boxes</option>
+                </select>
+            </div>
+
+            <div class="panel action-panel">
+                <button id="sortBtn" data-i18n="btn.sort">SORT</button>
+                <button id="randomizeBtn" data-i18n="btn.random">RANDOMIZE</button>
+            </div>
+
+        </div>
+    </aside>
+
+    <!-- VISUAL AREA -->
+    <main id="mainContainer" class="visual-area"></main>
+
+</div>
+
+<!-- DESCRIPTION -->
+<section id="algorithmDescription">
+    <h2 data-i18n="section.desc">Algorithm Description</h2>
+    <p id="description"></p>
+
+    <h3 data-i18n="section.code">Code Implementations</h3>
+    <div id="codeSnippets"></div>
+
+    <h3 data-i18n="section.editor">Code Editor</h3>
+    <div class="code-editor-container">
+        <textarea id="codeEditor"></textarea>
+    </div>
+</section>
+
+<!-- LANGUAGE -->
+<div class="lang-bubble">
+    <span class="bubble active" data-lang="vi">VI</span>
+    <span class="bubble" data-lang="en">EN</span>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+<script src="js/lang.js"></script>
+<script src="js/sort.js"></script>
+<script src="js/app.js"></script>
+
+<!-- FOOTER -->
+<footer>
+    <p>Built with MN-Team by <a href="https://github.com/PDN237" target="_blank">PDN237</a></p>
+</footer>
+
+</body>
+</html>
